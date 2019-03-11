@@ -1,6 +1,6 @@
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('Assets/Audio/creepy.mp3');
+        this.bgMusic = new Audio('Assets/Audio/Avengers.mp3');
         this.flipSound = new Audio('Assets/Audio/flip.wav');
         this.matchSound = new Audio('Assets/Audio/match.wav');
         this.victorySound = new Audio('Assets/Audio/victory.wav');
@@ -61,7 +61,7 @@ class MixOrMatch {
         return setInterval(() => {
             this.timeRemaining--;
             this.timer.innerText = this.timeRemaining;
-            if(this.timeRemaining === 0)
+            if(this.timeRemaining == 0)
                 this.gameOver();
         }, 1000);
     }
@@ -96,7 +96,7 @@ class MixOrMatch {
         }
     }
     checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+        if(this.getCardType(card) == this.getCardType(this.cardToCheck))
             this.cardMatch(card, this.cardToCheck);
         else 
             this.cardMismatch(card, this.cardToCheck);
@@ -109,7 +109,7 @@ class MixOrMatch {
         card1.classList.add('matched');
         card2.classList.add('matched');
         this.audioController.match();
-        if(this.matchedCards.length === this.cardsArray.length)
+        if(this.matchedCards.length == this.cardsArray.length)
             this.victory();
     }
     cardMismatch(card1, card2) {
@@ -131,7 +131,7 @@ class MixOrMatch {
         return card.getElementsByClassName('card-value')[0].src;
     }
     canFlipCard(card) {
-        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
+        return !this.busy && !this.matchedCards.includes(card) && card != this.cardToCheck;
     }
 }
 
@@ -144,7 +144,7 @@ if (document.readyState == 'loading') {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(100, cards);
+    let game = new MixOrMatch(80, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {

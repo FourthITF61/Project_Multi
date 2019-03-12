@@ -97,14 +97,14 @@ body {
   height: 52px;
 }
 
-.spider {
+.avg {
   margin: auto;
   align-self: flex-start;
   transition: transform 100ms ease-in-out;
   transform: translateY(-10px);
 }
 
-.card-back:hover .spider {
+.card-back:hover .avg {
   transform: translateY(0);
 }
 

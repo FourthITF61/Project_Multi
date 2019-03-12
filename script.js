@@ -40,7 +40,6 @@ class MixOrMatch {
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
     }
-
     startGame() {
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
@@ -96,11 +95,17 @@ class MixOrMatch {
         }
     }
     checkForCardMatch(card) {
-        if(this.getCardType(card) == this.getCardType(this.cardToCheck))
+        document.getElementById('addtime').style.cssText='font-family: Impact; font-size: 0.95em;font-style: italic; transition: 0.5s;';
+        if(this.getCardType(card) == this.getCardType(this.cardToCheck)){
             this.cardMatch(card, this.cardToCheck);
-        else 
+            this.timeRemaining+=5;
+            document.getElementById('addtime').style.opacity = '1';
+            document.getElementById('addtime').innerText="+ 5";
+        }
+        else{
             this.cardMismatch(card, this.cardToCheck);
-
+            document.getElementById('addtime').style.opacity = '0';
+        }
         this.cardToCheck = null;
     }
     cardMatch(card1, card2) {
@@ -144,7 +149,7 @@ if (document.readyState == 'loading') {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(80, cards);
+    let game = new MixOrMatch(30, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {

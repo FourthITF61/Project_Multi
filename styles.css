@@ -47,7 +47,7 @@ body {
   margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
+  grid-gap: 30px;
   justify-content: center;
   perspective: 500px;
 }
@@ -55,8 +55,8 @@ body {
 .card {
   position: relative;
   cursor: url("Assets/Cursors/GhostHover.cur"), auto;
-  height: 175px;
-  width: 125px;
+  height: 180px;
+  width: 140px;
 }
 
 .card-face {

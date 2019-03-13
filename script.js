@@ -95,12 +95,12 @@ class MixOrMatch {
         }
     }
     checkForCardMatch(card) {
-        document.getElementById('addtime').style.cssText='font-family: Impact; font-size: 0.95em;font-style: italic; transition: 0.5s;';
         if(this.getCardType(card) == this.getCardType(this.cardToCheck)){
             this.cardMatch(card, this.cardToCheck);
-            this.timeRemaining+=5;
+            this.timeRemaining+=6;
+            document.getElementById('addtime').innerText='+ 5';
+            document.getElementById('addtime').style.cssText='font-family: Impact; font-size: 0.95em; font-style: italic; transition: 1s;';
             document.getElementById('addtime').style.opacity = '1';
-            document.getElementById('addtime').innerText="+ 5";
         }
         else{
             this.cardMismatch(card, this.cardToCheck);

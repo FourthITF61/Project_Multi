@@ -9,54 +9,45 @@
   <title>Avenger Games</title>
   <style type="text/css">
     .game-container {
-        margin: 50px auto;
-        display: grid;
-        grid-template-columns: repeat(4, auto);
-        grid-gap: 30px;
-        justify-content: center;
-        perspective: 600px;
-      }
-      a{
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: repeat(6, auto);
+      grid-gap: 30px;
+      justify-content: center;
+      perspective: 600px;
+    }
+    a{
         text-decoration: none;
         color: #ff6d00;
-      }
-      img#img{
+    }
+    img#img{
       position: relative;
       display: block;
       top: 10px;
-      height: 27vh;
+      height: 35vh;
       margin: auto;   
     }
-    #num{
+    #num {
       display: none;
     }
   </style>
 </head>
 <body>
-  <div id="num">35</div>
+  <div id="num">45</div>
   <img id="img" src="Assets/images/av.png">
   <!--<h1 class="page-title">Avenger Games</h1>-->
   <a href="#about">
     <div class="overlay-text visible">
       Click to Start
-      <div class="test">
-        1.in one round, the game will count down 30sec to play.<br>
-        2.if card match will get bonus time 5sec.<br>
-        3.if timeout is game over.<br>
-      </div>
     </div>
   </a>
   <div id="game-over-text" class="overlay-text">
     GAME OVER
-    <span class="overlay-text-small">Click to Restart</span>
+    <a href="index.html"><span class="overlay-text-small">Click to Restart</span></a>
   </div>
   <div id="victory-text" class="overlay-text">
     VICTORY
-    
-      <!--<span class="overlay-text-small"><a href="index.html">Click to Restart</a></span>-->
-
-      <a href="next2.html"><span class="overlay-text-small">Click to Continue</span></a>
-    
+    <a href="index3.html"><span class="overlay-text-small">Click to Continue</span></a>
   </div>
 
 
@@ -199,6 +190,22 @@
         </div>
       </div>
 
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="avg" src="Assets/Images/avg.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/wolf.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="avg" src="Assets/Images/avg.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/wolf.png">
+        </div>
+      </div>
     </div>
   </section>
 </body>

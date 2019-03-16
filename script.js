@@ -92,19 +92,24 @@ class MixOrMatch {
             } else {
                 this.cardToCheck = card;
             }
+
+            if(this.totalClicks == document.getElementById('num').innerText){
+                this.gameOver();
+            }
         }
     }
     checkForCardMatch(card) {
         if(this.getCardType(card) == this.getCardType(this.cardToCheck)){
             this.cardMatch(card, this.cardToCheck);
-            this.timeRemaining+=6;
+            this.timeRemaining+=5;
             document.getElementById('addtime').innerText='+ 5';
             document.getElementById('addtime').style.cssText='font-family: Impact; font-size: 0.95em; font-style: italic; transition: 1s;';
             document.getElementById('addtime').style.opacity = '1';
+            setTimeout(function(){document.getElementById('addtime').style.opacity = '0';}, 2000)
         }
         else{
             this.cardMismatch(card, this.cardToCheck);
-            document.getElementById('addtime').style.opacity = '0';
+            
         }
         this.cardToCheck = null;
     }

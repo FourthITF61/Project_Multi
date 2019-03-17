@@ -36,11 +36,13 @@ class MixOrMatch {
         this.cardsArray = cards;
         this.totalTime = totalTime;
         this.timeRemaining = totalTime;
-        this.timer = document.getElementById('time-remaining')
+        this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
+        this.totalScore = document.getElementById('score');
         this.audioController = new AudioController();
     }
     startGame() {
+    	this.Score = 0;
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
         this.cardToCheck = null;
@@ -55,6 +57,7 @@ class MixOrMatch {
         this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
+        this.totalScore.innerText = this.Score;
     }
     startCountdown() {
         return setInterval(() => {
@@ -92,7 +95,6 @@ class MixOrMatch {
             } else {
                 this.cardToCheck = card;
             }
-
             if(this.totalClicks == document.getElementById('num').innerText){
                 this.gameOver();
             }
@@ -102,6 +104,8 @@ class MixOrMatch {
         if(this.getCardType(card) == this.getCardType(this.cardToCheck)){
             this.cardMatch(card, this.cardToCheck);
             this.timeRemaining+=5;
+            this.Score+=10;
+            this.totalScore.innerText = this.Score;
             document.getElementById('addtime').innerText='+ 5';
             document.getElementById('addtime').style.cssText='font-family: Impact; font-size: 0.95em; font-style: italic; transition: 1s;';
             document.getElementById('addtime').style.opacity = '1';
@@ -109,7 +113,10 @@ class MixOrMatch {
         }
         else{
             this.cardMismatch(card, this.cardToCheck);
-            
+            if (this.Score > 0){
+	            this.Score-=1;
+	            this.totalScore.innerText = this.Score;
+	        }
         }
         this.cardToCheck = null;
     }

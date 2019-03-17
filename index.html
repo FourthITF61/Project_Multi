@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,40 +9,39 @@
   <title>Avenger Games</title>
   <style type="text/css">
     .game-container {
-        margin: 50px auto;
-        display: grid;
-        grid-template-columns: repeat(4, auto);
-        grid-gap: 30px;
-        justify-content: center;
-        perspective: 600px;
-      }
-      a{
-        text-decoration: none;
-        color: #ff6d00;
-      }
-      img#img{
-      position: relative;
-      display: block;
-      top: 10px;
-      height: 27vh;
-      margin: auto;   
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-gap: 20px;
+      justify-content: center;
+      perspective: 600px;
+    }
+    a{
+      text-decoration: none;
+      color: #ff6d00;
     }
     #num{
       display: none;
     }
+    #play{
+      text-align: center;
+      font-size: 60px;
+    }
   </style>
 </head>
 <body>
+  <p class="lv">level&#160;&#160;1</p>
+  <p class="sc">score &#160;&#160;<span id="score">0</span></p>
   <div id="num">35</div>
-  <img id="img" src="Assets/images/av.png">
-  <!--<h1 class="page-title">Avenger Games</h1>-->
   <a href="#about">
     <div class="overlay-text visible">
-      Click to Start
+      Avenger Games
       <div class="test">
-        1.in one round, the game will count down 30sec to play.<br>
-        2.if card match will get bonus time 5sec.<br>
-        3.if timeout is game over.<br>
+      	how to play<br>
+        1. in one round, the game will count down 30sec to play.<br>
+        2. if card match will get bonus time 5sec.<br>
+        3. if timeout is game over.<br>
+        <p id="play">click to play</p>
       </div>
     </div>
   </a>
@@ -52,13 +51,9 @@
   </div>
   <div id="victory-text" class="overlay-text">
     VICTORY
-    
-      <!--<span class="overlay-text-small"><a href="index.html">Click to Restart</a></span>-->
-
       <a href="next2.html"><span class="overlay-text-small">Click to Continue</span></a>
     
   </div>
-
 
   <section id="about">
     <div class="game-container">
@@ -164,38 +159,6 @@
         </div>
         <div class="card-front card-face">
           <img class="card-value" src="Assets/Images/hokeye.png">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-back card-face">
-          <img class="avg" src="Assets/Images/avg.png">
-        </div>
-        <div class="card-front card-face">
-          <img class="card-value" src="Assets/Images/hug.png">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-back card-face">
-          <img class="avg" src="Assets/Images/avg.png">
-        </div>
-        <div class="card-front card-face">
-          <img class="card-value" src="Assets/Images/hug.png">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-back card-face">
-          <img class="avg" src="Assets/Images/avg.png">
-        </div>
-        <div class="card-front card-face">
-          <img class="card-value" src="Assets/Images/Dracula.png">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-back card-face">
-          <img class="avg" src="Assets/Images/avg.png">
-        </div>
-        <div class="card-front card-face">
-          <img class="card-value" src="Assets/Images/Dracula.png">
         </div>
       </div>
 

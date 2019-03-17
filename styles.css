@@ -30,12 +30,25 @@ body {
   font-size: 30px;
 }
 
-.page-title {
+.lv {
   color: #FF6D00;
   font-family: Creepy, serif;
   font-weight: normal;
-  text-align: center;
-  font-size: 6em;
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 15px;
+  font-size: 40px;
+}
+
+.sc {
+  color: #FF6D00;
+  font-family: Creepy, serif;
+  font-weight: normal;
+  position: absolute;
+  margin-top: 660px;
+  right: 0;
+  margin-right: 20px;
+  font-size: 40px;
 }
 
 .game-info-container {
@@ -48,15 +61,6 @@ body {
   color: #FFBB89;
   font-size: 3.5em;
 }
-
-/*.game-container {
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-gap: 30px;
-  justify-content: center;
-  perspective: 500px;
-}*/
 
 .card {
   position: relative;
@@ -180,7 +184,7 @@ a.overlay-text-small {
     font-size: 0;
   }
   to {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .9);
     font-size: 10em;
   }
 }

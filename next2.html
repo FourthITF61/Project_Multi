@@ -17,31 +17,40 @@
       perspective: 600px;
     }
     a{
-        text-decoration: none;
-        color: #ff6d00;
+      text-decoration: none;
+      color: #ff6d00;
     }
-    #num {
+    #num{
       display: none;
     }
   </style>
 </head>
 <body>
+  <video autoplay loop muted>
+    <source src="Assets/Images/space.mp4" type="video/mp4">
+  </video>
   <p class="lv">level&#160;&#160;2</p>
   <div id="num">45</div>
   <a href="#about">
     <div class="overlay-text visible">
-      Click to Start
+      level 2
+      <div class="test">
+        how to play &#160;:&#160; level 2<br>
+        1. Flip can not exceed 45 times in 30 seconds.<br>
+        2. There are 9 pairs of cards.<br>
+        3. Every level, if matched correctly, will increase by 5 seconds.<br>
+        <p id="continue">click to start</p>
+      </div>
     </div>
   </a>
   <div id="game-over-text" class="overlay-text">
     GAME OVER
-    <a href="index.html"><span class="overlay-text-small">Click to Restart</span></a>
+    <a href="index.html"><span class="overlay-text-small" id="continue">click to restart</span></a>
   </div>
   <div id="victory-text" class="overlay-text">
     VICTORY
-    <a href="next3.html"><span class="overlay-text-small">Click to Continue</span></a>
+    <a href="next3.html"><span class="overlay-text-small" id="continue">click to continue</span></a>
   </div>
-
 
   <section id="about">
     <div class="game-container">
@@ -154,6 +163,22 @@
           <img class="avg" src="Assets/Images/avg.png">
         </div>
         <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/Dracula.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="avg" src="Assets/Images/avg.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/Dracula.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="avg" src="Assets/Images/avg.png">
+        </div>
+        <div class="card-front card-face">
           <img class="card-value" src="Assets/Images/hug.png">
         </div>
       </div>
@@ -170,7 +195,7 @@
           <img class="avg" src="Assets/Images/avg.png">
         </div>
         <div class="card-front card-face">
-          <img class="card-value" src="Assets/Images/Dracula.png">
+          <img class="card-value" src="Assets/Images/x-man.png">
         </div>
       </div>
       <div class="card">
@@ -178,26 +203,10 @@
           <img class="avg" src="Assets/Images/avg.png">
         </div>
         <div class="card-front card-face">
-          <img class="card-value" src="Assets/Images/Dracula.png">
+          <img class="card-value" src="Assets/Images/x-man.png">
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
-          <img class="avg" src="Assets/Images/avg.png">
-        </div>
-        <div class="card-front card-face">
-          <img class="card-value" src="Assets/Images/wolf.png">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-back card-face">
-          <img class="avg" src="Assets/Images/avg.png">
-        </div>
-        <div class="card-front card-face">
-          <img class="card-value" src="Assets/Images/wolf.png">
-        </div>
-      </div>
     </div>
   </section>
 </body>

@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -23,35 +23,33 @@
     #num{
       display: none;
     }
-    #play{
-      text-align: center;
-      font-size: 60px;
-    }
   </style>
 </head>
 <body>
+  <video autoplay loop muted>
+    <source src="Assets/Images/space.mp4" type="video/mp4">
+  </video>
   <p class="lv">level&#160;&#160;1</p>
-  <p class="sc">score &#160;&#160;<span id="score">0</span></p>
   <div id="num">35</div>
   <a href="#about">
     <div class="overlay-text visible">
       Avenger Games
       <div class="test">
-      	how to play<br>
-        1. in one round, the game will count down 30sec to play.<br>
-        2. if card match will get bonus time 5sec.<br>
-        3. if timeout is game over.<br>
-        <p id="play">click to play</p>
+      	how to play &#160;:&#160; level 1<br>
+        1. Flip can not exceed 35 times in 30 seconds.<br>
+        2. There are 6 pairs of cards.<br>
+        3. Every level, if matched correctly, will increase by 5 seconds.<br>
+        <p id="continue">click to play</p>
       </div>
     </div>
   </a>
   <div id="game-over-text" class="overlay-text">
     GAME OVER
-    <span class="overlay-text-small">Click to Restart</span>
+    <span class="overlay-text-small" id="continue">click to restart</span>
   </div>
   <div id="victory-text" class="overlay-text">
     VICTORY
-      <a href="next2.html"><span class="overlay-text-small">Click to Continue</span></a>
+      <a href="next2.html"><span class="overlay-text-small" id="continue">click to continue</span></a>
     
   </div>
 

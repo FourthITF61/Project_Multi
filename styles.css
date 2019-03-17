@@ -14,16 +14,20 @@
 
 html {
   min-height: 100vh;
-  cursor: url(Assets/Cursors/Ghost.cur), auto;
+  cursor: url(Assets/Cursors/grx.cur), auto;
   font-family: Lunacy;
 }
 
 body {
   margin: 0;
-  background-image: url('https://i.pinimg.com/originals/8c/62/08/8c6208159a19e7be2212783d772e8d58.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+#continue{
+  font-size: 60px;
+  text-align: center;
 }
 
 .test {
@@ -35,19 +39,8 @@ body {
   font-family: Creepy, serif;
   font-weight: normal;
   position: absolute;
+  margin-left: 20px;
   margin-top: 660px;
-  margin-left: 15px;
-  font-size: 40px;
-}
-
-.sc {
-  color: #FF6D00;
-  font-family: Creepy, serif;
-  font-weight: normal;
-  position: absolute;
-  margin-top: 660px;
-  right: 0;
-  margin-right: 20px;
   font-size: 40px;
 }
 
@@ -64,7 +57,7 @@ body {
 
 .card {
   position: relative;
-  cursor: url("Assets/Cursors/GhostHover.cur"), auto;
+  cursor: url("Assets/Cursors/grxhover.cur"), auto;
   height: 175px;
   width: 125px;
 }
@@ -99,11 +92,12 @@ body {
 .card-back {
   background-color: black;
   border-color: #FF6D00;
-  transform: rotateY(0); 
+  transform: rotateY(0);
+  box-shadow: 0px 0px 20px 2px white;
 }
 
 .card-back:hover {
-  box-shadow: 0px 0px 30px 4px white;
+  box-shadow: 0px 0px 30px 4px red;
 }
 
 .card-face:hover .cob-web {
@@ -139,6 +133,7 @@ body {
   background-color: #FFBB89;
   border-color: #333;
   transform: rotateY(180deg);
+  box-shadow: 0px 0px 30px 4px black;
 }
 
 .overlay-text {
@@ -198,4 +193,15 @@ a.overlay-text-small {
     flex-direction: column;
     align-items: center;
   }
+}
+
+video{
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
 }

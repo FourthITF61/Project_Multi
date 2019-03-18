@@ -7,6 +7,7 @@
   <link href="styles.css" rel="stylesheet">
   <script src="script.js" async></script>
   <title>Avenger Games</title>
+  <link rel="icon" type="image/.png" href="Assets/Images/Avengers-Icon.png"/>
   <style type="text/css">
     .game-container {
       margin: 50px auto;
@@ -25,6 +26,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="vdo-contain">
     <video autoplay loop muted id="vdo-bg">
@@ -33,29 +35,34 @@
   </div>
   <p class="lv">level&#160;&#160;1</p>
   <p class="game">Avenger Games</p>
+
+  <!--กำหนดว่าจะจบเกมเมื่อพลิกการ์ดถึงจำนวนที่เท่าไหร่-->
   <div id="num">35</div>
+
   <a href="#about">
     <div class="overlay-text visible">
       Avenger Games
-      <div class="test">
+      <div class="how">
       	how to play &#160;:&#160; level 1<br>
-        1. flip can not exceed 35 times in 30 seconds.<br>
-        2. there are 6 pairs of cards.<br>
+        1. there are 6 pairs of cards.<br>
+        2. flip can not exceed 35 times.<br>
         3. every level, if matched correctly, will increase by 5 seconds.<br>
         <p id="continue">click to play</p>
       </div>
     </div>
   </a>
+
   <div id="game-over-text" class="overlay-text">
-    GAME OVER
+    GAME OVER <!--เมื่อเวลานับถอยหลังถึง 0 หรือ จำนวนที่พลิกการ์ด = 35 จะจบเกมส์แล้วแสดงข้อความนี้ขึ้นมา-->
     <span class="overlay-text-small" id="continue">click to restart</span>
   </div>
+
   <div id="victory-text" class="overlay-text">
-    VICTORY
+    VICTORY <!--เมื่อหาการ์ดได้ครบจนหมด จะจบเกมส์แล้วแสดงข้อความนี้ขึ้นมา-->
       <a href="next2.html"><span class="overlay-text-small" id="continue">click to next level</span></a>
-    
   </div>
 
+  <!--ตัวนับถอยหลังและนับจำนวนที่พลิกการ์ด-->
   <section id="about">
     <div class="game-container">
       <div class="game-info-container">
@@ -66,6 +73,8 @@
           Flips &#160;&#160;<span id="flips">0</span>
         </div>
       </div>
+
+      <!--การ์ดทั้งหมดบนหน้าเว็บ-->
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -74,6 +83,7 @@
           <img class="card-value" src="Assets/Images/ironman.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -82,6 +92,7 @@
           <img class="card-value" src="Assets/Images/ironman.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -90,6 +101,7 @@
           <img class="card-value" src="Assets/Images/captain.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -98,6 +110,7 @@
           <img class="card-value" src="Assets/Images/captain.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -106,6 +119,7 @@
           <img class="card-value" src="Assets/Images/natacha.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -114,6 +128,7 @@
           <img class="card-value" src="Assets/Images/natacha.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -122,6 +137,7 @@
           <img class="card-value" src="Assets/Images/thor.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -130,6 +146,7 @@
           <img class="card-value" src="Assets/Images/thor.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -138,6 +155,7 @@
           <img class="card-value" src="Assets/Images/antman.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -146,6 +164,7 @@
           <img class="card-value" src="Assets/Images/antman.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">
@@ -154,6 +173,7 @@
           <img class="card-value" src="Assets/Images/hokeye.png">
         </div>
       </div>
+
       <div class="card">
         <div class="card-back card-face">
           <img class="avg" src="Assets/Images/avg.png">

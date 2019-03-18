@@ -14,7 +14,7 @@
 
 html {
   min-height: 100vh;
-  cursor: url(Assets/Cursors/grx.cur), auto;
+  cursor: url(Assets/Cursors/RoboCop.cur), auto;
   font-family: Lunacy;
 }
 
@@ -30,7 +30,7 @@ body {
   text-align: center;
 }
 
-.test {
+.how {
   font-size: 30px;
 }
 
@@ -38,9 +38,9 @@ body {
   color: #FF6D00;
   font-family: Creepy, serif;
   font-weight: normal;
-  position: absolute;
-  margin-left: 20px;
-  margin-top: 660px;
+  position: fixed;
+  bottom: -45px;
+  left: 8px;
   font-size: 40px;
   text-shadow: black 0.1em 0.1em 0.2em;
 }
@@ -49,10 +49,9 @@ body {
   color: #FF6D00;
   font-family: Creepy, serif;
   font-weight: normal;
-  position: absolute;
-  right: 0px;
-  margin-right: 15px;
-  margin-top: 672px;
+  position: fixed;
+  right: 10px;
+  bottom: -32px;
   font-size: 30px;
   text-shadow: black 0.1em 0.1em 0.2em;
 }
@@ -71,7 +70,7 @@ body {
 
 .card {
   position: relative;
-  cursor: url("Assets/Cursors/grxhover.cur"), auto;
+  cursor: url("Assets/Cursors/ironman.cur"), auto;
   height: 175px;
   width: 125px;
 }
@@ -130,7 +129,6 @@ body {
 .card-back:hover .avg {
   transform: translateY(0);
   transition: .3s;
-  /*box-shadow: 0px 0px 50px white;*/
 }
 
 .card-value {
@@ -208,18 +206,6 @@ a.overlay-text-small {
     align-items: center;
   }
 }
-
-/*video{
-  position: fixed;
-  right: 0; 
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -100;
-  display: block;
-}*/
 
 #vdo-bg {
   position: relative;

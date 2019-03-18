@@ -1,4 +1,4 @@
-class AudioController {
+class AudioController { //ฟังชั่นใช้ควบคุมเสียง
     constructor() {
         this.bgMusic = new Audio('Assets/Audio/Avengers.mp3');
         this.flipSound = new Audio('Assets/Audio/flip.wav');
@@ -31,7 +31,7 @@ class AudioController {
     }
 }
 
-class MixOrMatch {
+class AvengerGames { //ฟังชั่นหลักในการสลับการ์ด, นับเวลาถอยหลัง, นับจำนวนที่พลิกการ์ด
     constructor(totalTime, cards) {
         this.cardsArray = cards;
         this.totalTime = totalTime;
@@ -102,12 +102,12 @@ class MixOrMatch {
             }
         }
     }
-    checkForCardMatch(card) {
+    checkForCardMatch(card) { //ฟังชั่นเช็คว่าการ์ด 2 ใบ ที่พลิก ตรงกันหรือไม่ ถ้าตรงจะบวกเวลาเพิ่มไปอีก 5 วินาที
         if(this.getCardType(card) == this.getCardType(this.cardToCheck)){
             this.cardMatch(card, this.cardToCheck);
-            this.timeRemaining+=5;
-            document.getElementById('addtime').innerText='+ 5';
-            document.getElementById('addtime').style.cssText='font-family: Impact; font-size: 0.95em; font-style: italic; transition: 1s;';
+            this.timeRemaining += 5;
+            document.getElementById('addtime').innerText = '+ 5';
+            document.getElementById('addtime').style.cssText = 'font-family: Impact; font-size: 0.95em; font-style: italic; transition: 1s;';
             document.getElementById('addtime').style.opacity = '1';
             setTimeout(function(){document.getElementById('addtime').style.opacity = '0';}, 1500);
         }
@@ -133,7 +133,7 @@ class MixOrMatch {
             this.busy = false;
         }, 1000);
     }
-    shuffleCards(cardsArray) { // Fisher-Yates Shuffle Algorithm.
+    shuffleCards(cardsArray) {
         for (let i = cardsArray.length - 1; i > 0; i--) {
             let randIndex = Math.floor(Math.random() * (i + 1));
             cardsArray[randIndex].style.order = i;
@@ -154,10 +154,10 @@ if (document.readyState == 'loading') {
     ready();
 }
 
-function ready() {
+function ready() { //ฟังชั่นกำหนดเวลาในการเล่น, ทำอะไรเกมส์ถึงจะเริ่ม
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(30, cards);
+    let game = new AvengerGames(30, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {

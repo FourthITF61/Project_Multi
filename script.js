@@ -70,9 +70,14 @@ class MixOrMatch {
         document.getElementById('game-over-text').classList.add('visible');
     }
     victory() {
-        clearInterval(this.countdown);
-        this.audioController.victory();
-        document.getElementById('victory-text').classList.add('visible');
+        if(this.totalClicks == document.getElementById('num').innerText){
+            this.gameOver();
+        }
+        else{
+            clearInterval(this.countdown);
+            this.audioController.victory();
+            document.getElementById('victory-text').classList.add('visible');
+        }
     }
     hideCards() {
         this.cardsArray.forEach(card => {

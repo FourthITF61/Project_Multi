@@ -26,19 +26,22 @@
   </style>
 </head>
 <body>
-  <video autoplay loop muted>
-    <source src="Assets/Images/space.mp4" type="video/mp4">
-  </video>
+  <div class="vdo-contain">
+    <video autoplay loop muted id="vdo-bg">
+      <source src="Assets/Images/space.mp4" type="video/mp4">
+    </video>
+  </div>
   <p class="lv">level&#160;&#160;1</p>
+  <p class="game">Avenger Games</p>
   <div id="num">35</div>
   <a href="#about">
     <div class="overlay-text visible">
       Avenger Games
       <div class="test">
       	how to play &#160;:&#160; level 1<br>
-        1. Flip can not exceed 35 times in 30 seconds.<br>
-        2. There are 6 pairs of cards.<br>
-        3. Every level, if matched correctly, will increase by 5 seconds.<br>
+        1. flip can not exceed 35 times in 30 seconds.<br>
+        2. there are 6 pairs of cards.<br>
+        3. every level, if matched correctly, will increase by 5 seconds.<br>
         <p id="continue">click to play</p>
       </div>
     </div>
@@ -49,7 +52,7 @@
   </div>
   <div id="victory-text" class="overlay-text">
     VICTORY
-      <a href="next2.html"><span class="overlay-text-small" id="continue">click to continue</span></a>
+      <a href="next2.html"><span class="overlay-text-small" id="continue">click to next level</span></a>
     
   </div>
 

@@ -1,5 +1,6 @@
 # Info The Project
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Marvel%27s_The_Avengers_logo.svg/1621px-Marvel%27s_The_Avengers_logo.svg.png" width="500">
+Project นี้เป็นการสร้างเกมส์ในเว็บไซต์โดยใช้ภาษา HTML, JavaScript, CSS ในการเขียนโค้ดซึ่งเป็นเกมส์จับคู่การ์ดอเวนเจอร์และมีหลายด้านซึ่งมีความท้าทายมากขึ้นเลื่อยๆ ถ้าพร้อมแล้วไปสนุกกันเลย...
 
 # Avenger Team
 <ol>
@@ -11,3 +12,4 @@
 </ol>
 
 # References
+    <a href="https://www.youtube.com/watch?v=28VfzEiJgy4&feature=share&fbclid=IwAR3rAmbFpUnd1tSFrh9htdTV-w2zWm4_m-mK2uuzMcjzJvCK2g9hfz9EmEs">ThaiRSC</a> : ศูนย์ข้อมูลอุบัติเหตุ</li>

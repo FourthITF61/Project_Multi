@@ -12,4 +12,4 @@ Project นี้เป็นการสร้างเกมส์ในเว
 </ol>
 
 # References
-    <a href="https://www.youtube.com/watch?v=28VfzEiJgy4&feature=share&fbclid=IwAR3rAmbFpUnd1tSFrh9htdTV-w2zWm4_m-mK2uuzMcjzJvCK2g9hfz9EmEs">Web Dev Simplified </a>
+    <a href="https://www.youtube.com/watch?v=28VfzEiJgy4&feature=share&fbclid=IwAR3rAmbFpUnd1tSFrh9htdTV-w2zWm4m-mK2uuzMcjzJvCK2g9hfz9EmEs/">Web Dev Simplified</a><p>
